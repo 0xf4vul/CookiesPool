@@ -34,7 +34,8 @@ class CookiesGenerator(object):
         if BROWSER_TYPE == 'PhantomJS':
             caps = DesiredCapabilities.PHANTOMJS
             caps["phantomjs.page.settings.userAgent"] = \
-                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) ' \
+                'Chrome/57.0.2987.133 Safari/537.36'
             self.browser = webdriver.PhantomJS(desired_capabilities=caps)
             self.browser.set_window_size(1400, 500)
         elif BROWSER_TYPE == 'Chrome':

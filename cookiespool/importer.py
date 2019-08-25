@@ -22,7 +22,7 @@ def scan():
         account = input()
         if account == 'exit':
             break
-        set(account)
+        set(account)  # example ->'kylin----1234'
 
 
 if __name__ == '__main__':

@@ -11,7 +11,8 @@ from os import listdir
 from os.path import abspath, dirname
 
 '''
-[cookies检测模块]
+[使用账号密码登录]
+-破解可能出现的验证码
 '''
 
 
@@ -19,7 +20,7 @@ TEMPLATES_FOLDER = dirname(abspath(__file__)) + '/templates/'
 
 
 class WeiboCookies():
-    def __init__(self, username, password, browser):
+    def __init__(self, username, password, browser=None):
         self.url = 'https://passport.weibo.cn/signin/login?entry=mweibo&r=https://m.weibo.cn/'
         self.browser = browser
         self.wait = WebDriverWait(self.browser, 20)

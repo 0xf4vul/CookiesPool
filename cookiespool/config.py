@@ -10,12 +10,12 @@ REDIS_PASSWORD = 'foobared'
 # 产生器使用的浏览器
 BROWSER_TYPE = 'Chrome'
 
-# 产生器类 ->如扩展其他站点,请在此配置
+# 产生器类 ->如扩展其他站点,在此配置
 GENERATOR_MAP = {
     'weibo': 'WeiboCookiesGenerator'
 }
 
-# 测试类 ->如扩展其他站点,请在此配置
+# 测试类 ->如扩展其他站点,在此配置
 TESTER_MAP = {
     'weibo': 'WeiboValidTester'
 }

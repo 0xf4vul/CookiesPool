@@ -18,10 +18,12 @@ class Scheduler(object):
             print('Cookies检测进程开始运行')
             try:
                 for website, cls in TESTER_MAP.items():
+                    # attention +--
                     tester = eval(cls + '(website="' + website + '")')
                     tester.run()
                     print('Cookies检测完成')
                     del tester
+                    # -------------
                     time.sleep(cycle)
             except Exception as e:
                 print(e.args)
@@ -32,10 +34,12 @@ class Scheduler(object):
             print('Cookies生成进程开始运行')
             try:
                 for website, cls in GENERATOR_MAP.items():
+                    # attention +--
                     generator = eval(cls + '(website="' + website + '")')
                     generator.run()
                     print('Cookies生成完成')
                     generator.close()
+                    # -------------
                     time.sleep(cycle)
             except Exception as e:
                 print(e.args)
@@ -47,6 +51,7 @@ class Scheduler(object):
     
     def run(self):
         if API_PROCESS:
+            # attention +--
             api_process = Process(target=Scheduler.api)
             api_process.start()
         
